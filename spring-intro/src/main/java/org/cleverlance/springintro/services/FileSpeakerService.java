@@ -27,7 +27,7 @@ public class FileSpeakerService implements ISpeaker {
 		try {
 			fw = new FileWriter(logPath + logName, true);
 			fw.write(text + "\n");
-			fw.flush();
+			fw.close();
 		} catch (IOException e) {
 			System.out.println("Log cannot be written.");
 			e.printStackTrace();
